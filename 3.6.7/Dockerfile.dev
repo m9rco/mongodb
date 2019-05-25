@@ -1,0 +1,5 @@
+FROM m9rco/mongodb:3.6.7
+LABEL maintainer="m9rco <pushaowei0727@gmail.com>"
+
+
+CMD ["supervisord", "--nodaemon", "--configuration", "/etc/supervisor/conf.d/supervisord.conf"]
