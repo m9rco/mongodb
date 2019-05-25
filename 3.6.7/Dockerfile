@@ -5,7 +5,6 @@ RUN apk add -U --no-cache ca-certificates \
     mongodb=3.6.7-r0 \
     && rm -rf /var/cache/apk/* 
 
-ADD rootfs /
 
 ENV BITNAMI_APP_NAME="mongodb" \
     BITNAMI_IMAGE_VERSION="3.6.7-r0" \
@@ -29,8 +28,8 @@ ENV BITNAMI_APP_NAME="mongodb" \
     NAMI_PREFIX="/.m9rco" \
     PATH="/usr/local/mongodb/bin:$PATH"
 
+ADD rootfs /
 
 EXPOSE 27017 28017
-
 ENTRYPOINT [ "/usr/share/entrypoint.sh" ]
 CMD [ "mongod", "--bind_ip", "0.0.0.0" ]
