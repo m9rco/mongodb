@@ -5,7 +5,6 @@ RUN apk add -U --no-cache ca-certificates \
     mongodb=3.6.7-r0 \
     && rm -rf /var/cache/apk/* 
 
-
 ENV BITNAMI_APP_NAME="mongodb" \
     BITNAMI_IMAGE_VERSION="3.6.7-r0" \
     MONGODB_ADVERTISED_HOSTNAME="" \
